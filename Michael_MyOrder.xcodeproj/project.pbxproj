@@ -19,6 +19,10 @@
 		A74EF02F270501E00013C415 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EF02D270501E00013C415 /* Order.swift */; };
 		A762C03526FEB66800CF6BC2 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762C03426FEB66800CF6BC2 /* OrderList.swift */; };
 		A762C03626FEB66800CF6BC2 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762C03426FEB66800CF6BC2 /* OrderList.swift */; };
+		A7B9FEC2270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */; };
+		A7B9FEC3270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */; };
+		A7B9FEC4270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */; };
+		A7B9FEC5270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,7 @@
 		A7402D4A26FEB0E500E082F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74EF02D270501E00013C415 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A762C03426FEB66800CF6BC2 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
+		A7B9FEC1270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataOrder.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +109,11 @@
 		A7402D2126FEB0E300E082F4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A7B9FEC8270E5C3700BCF6E1 /* Views */,
+				A7B9FEC7270E5C1800BCF6E1 /* Helpers */,
+				A7B9FEC6270E5C0300BCF6E1 /* Models */,
 				A7402D2226FEB0E300E082F4 /* Michael_MyOrderApp.swift */,
-				A7402D2326FEB0E300E082F4 /* ContentView.swift */,
 				A7402D2426FEB0E500E082F4 /* Assets.xcassets */,
-				A762C03426FEB66800CF6BC2 /* OrderList.swift */,
 				A74EF02D270501E00013C415 /* Order.swift */,
 			);
 			path = Shared;
@@ -157,6 +163,30 @@
 				A7402D4A26FEB0E500E082F4 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		A7B9FEC6270E5C0300BCF6E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7B9FEC7270E5C1800BCF6E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A7B9FEC8270E5C3700BCF6E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A762C03426FEB66800CF6BC2 /* OrderList.swift */,
+				A7402D2326FEB0E300E082F4 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +349,7 @@
 				A7402D4D26FEB0E500E082F4 /* ContentView.swift in Sources */,
 				A7402D4B26FEB0E500E082F4 /* Michael_MyOrderApp.swift in Sources */,
 				A74EF02E270501E00013C415 /* Order.swift in Sources */,
+				A7B9FEC2270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */,
 				A762C03526FEB66800CF6BC2 /* OrderList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +361,7 @@
 				A7402D4E26FEB0E500E082F4 /* ContentView.swift in Sources */,
 				A7402D4C26FEB0E500E082F4 /* Michael_MyOrderApp.swift in Sources */,
 				A74EF02F270501E00013C415 /* Order.swift in Sources */,
+				A7B9FEC3270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */,
 				A762C03626FEB66800CF6BC2 /* OrderList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7402D3E26FEB0E500E082F4 /* Tests_iOS.swift in Sources */,
+				A7B9FEC4270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7402D4926FEB0E500E082F4 /* Tests_macOS.swift in Sources */,
+				A7B9FEC5270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +742,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A7B9FEC1270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodel */,
+			);
+			currentVersion = A7B9FEC1270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodel */;
+			path = CoreDataOrder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A7402D1D26FEB0E300E082F4 /* Project object */;
 }
