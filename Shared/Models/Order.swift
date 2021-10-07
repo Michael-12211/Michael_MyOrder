@@ -12,6 +12,7 @@ import SwiftUI
 struct Order : Identifiable, Hashable {
     var id = UUID()
     
+    //var dateOrdered: Date
     var type: String
     var size: String
     var qnt: String
@@ -20,7 +21,16 @@ struct Order : Identifiable, Hashable {
         self.size = size
         self.type = type
         self.qnt = qnt
+        //self.dateOrdered = Date()
     }
+    
+    init(oID: UUID, type: String, size: String, qnt: String){
+        self.id = oID
+        self.size = size
+        self.type = type
+        self.qnt = qnt
+    }
+    
 }
 
 //observable object holding the list of orders
