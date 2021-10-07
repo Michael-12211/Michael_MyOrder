@@ -20,6 +20,7 @@
 		A762C03626FEB66800CF6BC2 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762C03426FEB66800CF6BC2 /* OrderList.swift */; };
 		A791823F270F7E12007330DF /* CoreDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A791823E270F7E12007330DF /* CoreDBHelper.swift */; };
 		A7918247270F83DC007330DF /* OrderMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7918246270F83DC007330DF /* OrderMO.swift */; };
+		A7918249270F89CC007330DF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7918248270F89CC007330DF /* Persistence.swift */; };
 		A7B9FEC2270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */; };
 		A7B9FEC3270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */; };
 		A7B9FEC4270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7B9FEC0270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld */; };
@@ -62,6 +63,7 @@
 		A762C03426FEB66800CF6BC2 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
 		A791823E270F7E12007330DF /* CoreDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDBHelper.swift; sourceTree = "<group>"; };
 		A7918246270F83DC007330DF /* OrderMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMO.swift; sourceTree = "<group>"; };
+		A7918248270F89CC007330DF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A7B9FEC1270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataOrder.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				A7B9FEC6270E5C0300BCF6E1 /* Models */,
 				A7402D2226FEB0E300E082F4 /* Michael_MyOrderApp.swift */,
 				A7402D2426FEB0E500E082F4 /* Assets.xcassets */,
+				A7918248270F89CC007330DF /* Persistence.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7918247270F83DC007330DF /* OrderMO.swift in Sources */,
+				A7918249270F89CC007330DF /* Persistence.swift in Sources */,
 				A7402D4D26FEB0E500E082F4 /* ContentView.swift in Sources */,
 				A7402D4B26FEB0E500E082F4 /* Michael_MyOrderApp.swift in Sources */,
 				A74EF02E270501E00013C415 /* Order.swift in Sources */,
