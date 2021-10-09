@@ -28,7 +28,7 @@ class CoreDBHelper: ObservableObject{
     }
     
     private let moc : NSManagedObjectContext
-    private let ENTITY_NAME = "BookMO"
+    private let ENTITY_NAME = "OrderMO"
     
     init(context: NSManagedObjectContext){
         self.moc = context
@@ -57,7 +57,7 @@ class CoreDBHelper: ObservableObject{
     
     func getAllOrders(){
         let fetchRequest = NSFetchRequest<OrderMO>(entityName: ENTITY_NAME)
-        fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "dateOrdered", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "dateOrdered", ascending: false)]
         
         do{
             let result = try self.moc.fetch(fetchRequest)

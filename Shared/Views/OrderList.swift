@@ -10,24 +10,33 @@ import Foundation
 import SwiftUI
 
 struct OrderList: View {
-    @EnvironmentObject var orders: Orders
+    //@EnvironmentObject var orders: Orders
+    
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var coreDBHelper : CoreDBHelper
     
     var body: some View {
         NavigationView{
             List {
-                ForEach(orders.ord, id: \.self) { order in
-                    Text("\(order.qnt) \(order.size) \(order.type)")
+                ForEach (self.coreDBHelper.mOrders.enumerated().map({$0}), id: \.element.self) { indx, order in
+                    Text("\(order.quantity) \(order.size) \(order.type)")
                 }
                 .onDelete(perform: delete)
             }.navigationBarTitle("Pending orders", displayMode: .inline)
             
+            
         }
+        .onAppear(){
+            self.coreDBHelper.getAllOrders()
+        }
+        .onDisappear(){self.coreDBHelper.getAllOrders()}
+        
         
     }
     
     func delete(at offsets: IndexSet)
     {
-        self.orders.ord.remove(atOffsets: offsets)
+        /*self.orders.ord.remove(atOffsets: offsets)*/
     }
 }
 

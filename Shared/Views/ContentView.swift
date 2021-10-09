@@ -10,8 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     
+    //setting access to core data
+    @EnvironmentObject var coreDBHelper : CoreDBHelper
+    @Environment(\.presentationMode) var presentationMode
+    
     //initiating orders
-    @StateObject var orders = Orders()
+    //@StateObject var orders = Orders()
     
     //setting picker values
     @State private var type = "Dark roast"
@@ -25,14 +29,6 @@ struct ContentView: View {
         NavigationView{
                 VStack
                 {
-                    /*Button(action:{
-                        print("navigating to next screen")
-                    }){
-                        NavigationLink("view orders", destination: OrderList())
-                            .font(.system(size: 30)).padding().background(Color(white:0.9)).cornerRadius(10)
-                    }
-                    .frame(width: 330, height: 10, alignment: .topTrailing)
-                    .navigationBarTitle("Place order", displayMode: .inline)*/
                     
                     HStack
                     {
@@ -81,22 +77,26 @@ struct ContentView: View {
                     //Text("You selected \(type)")
             
                     Button("Add order") {
-                        //orders.type = type
-                        //orders.size = size
-                        //orders.qnt = quantity
-                        let ord = Order(type:type,size:size,qnt:quantity)
-                        orders.ord.append(ord)
+                        //let ord = Order(type:type,size:size,qnt:quantity)
+                        //orders.ord.append(ord)
+                        addOrder()
                     }
                     .font(.system(size: 30)).padding().background(Color(white:0.9)).cornerRadius(10)
                     
                 }
         }
-        .environmentObject(orders)
+        //.environmentObject(CoreDBHelper)
         /*.onTapGesture {
             self.endEditing()
         }*/
         
         
+    }
+    
+    private func addOrder()
+    {
+        self.coreDBHelper.insertTask(order: Order(type: type, size: size, qnt: quantity))
+        self.presentationMode.wrappedValue.dismiss()
     }
     
     private func endEditing() {

@@ -34,6 +34,6 @@ struct Order : Identifiable, Hashable {
 }
 
 //observable object holding the list of orders
-class Orders : ObservableObject{
+/*class Orders : ObservableObject{
     @Published var ord = [Order]()
-}
+}*/
