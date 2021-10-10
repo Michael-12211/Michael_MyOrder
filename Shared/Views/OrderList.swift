@@ -21,7 +21,12 @@ struct OrderList: View {
                 ForEach (self.coreDBHelper.mOrders.enumerated().map({$0}), id: \.element.self) { indx, order in
                     Text("\(order.quantity) \(order.size) \(order.type)")
                 }
-                .onDelete(perform: delete)
+                .onDelete(perform: { indexSet in
+                    for index in indexSet{
+                        self.coreDBHelper.deleteOrder(orderID: self.coreDBHelper.mOrders[index].id!)
+                        self.coreDBHelper.mOrders.remove(at: index)
+                    }
+                })//onDelete
             }.navigationBarTitle("Pending orders", displayMode: .inline)
             
             
@@ -34,10 +39,10 @@ struct OrderList: View {
         
     }
     
-    func delete(at offsets: IndexSet)
+    /*func delete(at offsets: IndexSet)
     {
         /*self.orders.ord.remove(atOffsets: offsets)*/
-    }
+    }*/
 }
 
 struct OrderList_Previews: PreviewProvider {
