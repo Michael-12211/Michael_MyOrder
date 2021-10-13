@@ -34,7 +34,7 @@ class CoreDBHelper: ObservableObject{
         self.moc = context
     }
     
-    func insertTask(order: Order){
+    func insertOrder(order: Order){
         do{
             
             let insertedOrder = NSEntityDescription.insertNewObject(forEntityName: ENTITY_NAME, into: self.moc) as! OrderMO
@@ -109,7 +109,7 @@ class CoreDBHelper: ObservableObject{
         }
     }
     
-    func updateBook(updatedOrder: OrderMO){
+    func updateOrder(updatedOrder: OrderMO){
         let searchResult = self.searchOrder(orderID: updatedOrder.id! as UUID)
         
         if (searchResult != nil){

@@ -95,7 +95,7 @@ struct ContentView: View {
     
     private func addOrder()
     {
-        self.coreDBHelper.insertTask(order: Order(type: type, size: size, qnt: quantity))
+        self.coreDBHelper.insertOrder(order: Order(type: type, size: size, qnt: Int(quantity) ?? 0))
         self.presentationMode.wrappedValue.dismiss()
     }
     

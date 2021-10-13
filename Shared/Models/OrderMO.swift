@@ -13,7 +13,7 @@ final class OrderMO: NSManagedObject{
     @NSManaged var id: UUID?
     @NSManaged var type: String
     @NSManaged var size: String
-    @NSManaged var quantity: String
+    @NSManaged var quantity: Int
     @NSManaged var dateOrdered: Date
 }
 

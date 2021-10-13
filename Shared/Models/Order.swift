@@ -15,16 +15,16 @@ struct Order : Identifiable, Hashable {
     //var dateOrdered: Date
     var type: String
     var size: String
-    var qnt: String
+    var qnt: Int
     
-    init(type: String, size: String, qnt: String){
+    init(type: String, size: String, qnt: Int){
         self.size = size
         self.type = type
         self.qnt = qnt
         //self.dateOrdered = Date()
     }
     
-    init(oID: UUID, type: String, size: String, qnt: String){
+    init(oID: UUID, type: String, size: String, qnt: Int){
         self.id = oID
         self.size = size
         self.type = type

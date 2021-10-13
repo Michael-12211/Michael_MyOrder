@@ -18,6 +18,8 @@
 		A74EF02E270501E00013C415 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EF02D270501E00013C415 /* Order.swift */; };
 		A762C03526FEB66800CF6BC2 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762C03426FEB66800CF6BC2 /* OrderList.swift */; };
 		A762C03626FEB66800CF6BC2 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A762C03426FEB66800CF6BC2 /* OrderList.swift */; };
+		A76394842717A296009F6C86 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76394832717A295009F6C86 /* DetailView.swift */; };
+		A76394852717A296009F6C86 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76394832717A295009F6C86 /* DetailView.swift */; };
 		A791823F270F7E12007330DF /* CoreDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A791823E270F7E12007330DF /* CoreDBHelper.swift */; };
 		A7918247270F83DC007330DF /* OrderMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7918246270F83DC007330DF /* OrderMO.swift */; };
 		A7918249270F89CC007330DF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7918248270F89CC007330DF /* Persistence.swift */; };
@@ -61,6 +63,7 @@
 		A7402D4A26FEB0E500E082F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74EF02D270501E00013C415 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A762C03426FEB66800CF6BC2 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
+		A76394832717A295009F6C86 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A791823E270F7E12007330DF /* CoreDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDBHelper.swift; sourceTree = "<group>"; };
 		A7918246270F83DC007330DF /* OrderMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMO.swift; sourceTree = "<group>"; };
 		A7918248270F89CC007330DF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			children = (
 				A762C03426FEB66800CF6BC2 /* OrderList.swift */,
 				A7402D2326FEB0E300E082F4 /* ContentView.swift */,
+				A76394832717A295009F6C86 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7918247270F83DC007330DF /* OrderMO.swift in Sources */,
+				A76394842717A296009F6C86 /* DetailView.swift in Sources */,
 				A7918249270F89CC007330DF /* Persistence.swift in Sources */,
 				A7402D4D26FEB0E500E082F4 /* ContentView.swift in Sources */,
 				A7402D4B26FEB0E500E082F4 /* Michael_MyOrderApp.swift in Sources */,
@@ -372,6 +377,7 @@
 				A7402D4E26FEB0E500E082F4 /* ContentView.swift in Sources */,
 				A7402D4C26FEB0E500E082F4 /* Michael_MyOrderApp.swift in Sources */,
 				A7B9FEC3270E5BC400BCF6E1 /* CoreDataOrder.xcdatamodeld in Sources */,
+				A76394852717A296009F6C86 /* DetailView.swift in Sources */,
 				A762C03626FEB66800CF6BC2 /* OrderList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
