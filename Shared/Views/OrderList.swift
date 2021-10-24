@@ -24,7 +24,7 @@ struct OrderList: View {
     @State private var selected:OrderMO? = nil
     
     var body: some View {
-        NavigationView{
+        //NavigationView{
             ZStack(alignment: .bottom){
                 NavigationLink(destination: DetailView(selected: self.selectedIndex), tag: 1, selection: $selection){}
             List {
@@ -47,12 +47,16 @@ struct OrderList: View {
             }
             .navigationBarTitle("Pending orders", displayMode: .inline)
             }
+            .onAppear(){
+                self.coreDBHelper.getAllOrders()
+            }
+            .onDisappear(){self.coreDBHelper.getAllOrders()}
             
-        }
+        /*}
         .onAppear(){
             self.coreDBHelper.getAllOrders()
         }
-        .onDisappear(){self.coreDBHelper.getAllOrders()}
+        .onDisappear(){self.coreDBHelper.getAllOrders()}*/
         
         
     }

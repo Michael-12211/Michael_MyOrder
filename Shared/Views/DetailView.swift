@@ -17,7 +17,7 @@ struct DetailView: View {
     @EnvironmentObject var coreDBHelper : CoreDBHelper
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(){
             Text("Order Details")
                 .font(.title)
                 .padding(20)
@@ -29,6 +29,7 @@ struct DetailView: View {
                 Text("Quantity:")
                 TextField("Quantity", text: $quantity, onCommit: {UIApplication.shared.endEditing()}).padding().keyboardType(.numberPad)
             }
+            .frame(width: 150, height: 50, alignment: .center)
             
             Button(action: {
                 print("update")
